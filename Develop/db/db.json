@@ -1,13 +1,14 @@
 {
-    "notes":
-[
+  "notes": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "title": "Test Title",
+      "text": "Test text"
     },
     {
-        "title": "Recycling",
-        "text": "bring recycling to Kohl's"
-    }
-]
+      "title": "Recycling",
+      "text": "bring recycling to Kohl's"
+    },
+    "2",
+    "3"
+  ]
 }
