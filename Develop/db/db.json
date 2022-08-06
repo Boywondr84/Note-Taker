@@ -2,13 +2,23 @@
   "notes": [
     {
       "title": "Test Title",
-      "text": "Test text"
+      "text": "Test Text",
+      "id": "0"
     },
     {
-      "title": "Recycling",
-      "text": "bring recycling to Kohl's"
+      "title": "Car",
+      "text": "wash and vacuum",
+      "id": "1"
     },
-    "2",
-    "3"
+    {
+      "title": "Laundry",
+      "text": "Wash sheets and towels",
+      "id": "2"
+    },
+    {
+      "title": "Trash",
+      "text": "Take out trash and recycling",
+      "id": "3"
+    }
   ]
 }

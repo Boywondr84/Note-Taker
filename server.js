@@ -11,14 +11,15 @@ app.use(express.json());
 const { notes } = require('./Develop/db/db.json');
 
 // function that adds new to notes to db.json
-function createNewNote(body, notesArray) {
+function createNewNote(body, activeNote) {
+    console.log(body);
     const note = body;
-    notesArray.push(note);
+    notes.push(note);
     fs.writeFileSync(
         path.join(__dirname, './Develop/db/db.json'),
-        JSON.stringify({ notes: notesArray }, null, 2)
+        JSON.stringify({ notes: activeNote }, null, 2)
     );
-    return note;
+    return body;
 }
 
 app.get('/api/notes', (req, res) => {
@@ -39,10 +40,10 @@ app.get('*', (req, res) => {
 
 // post notes in database
 app.post('/api/notes', (req, res) => {
-    req.body = notes.length.toString();
+    req.body.id = notes.length.toString();
     const note = createNewNote(req.body, notes);
-    res.json(note);
     console.log(note);
+    res.json(note);
 });
 
 app.listen(PORT, () => {
