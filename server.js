@@ -12,7 +12,7 @@ const { notes } = require('./Develop/db/db.json');
 
 // function that adds new to notes to db.json
 function createNewNote(body, activeNote) {
-    console.log(body);
+    // console.log(body);
     const note = body;
     notes.push(note);
     fs.writeFileSync(
@@ -47,5 +47,5 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log("API server now on port ${PORT}");
+    console.log("API server now on port" + ` ${PORT}`);
 });

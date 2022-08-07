@@ -19,6 +19,26 @@
       "title": "Trash",
       "text": "Take out trash and recycling",
       "id": "3"
+    },
+    {
+      "title": "Birthday",
+      "text": "Pick up birthday cake",
+      "id": "4"
+    },
+    {
+      "title": "Lawn",
+      "text": "Rack sticks and mow lawn before rain",
+      "id": "5"
+    },
+    {
+      "title": "Babysitter",
+      "text": "Line up babysitter for weekend brunch",
+      "id": "6"
+    },
+    {
+      "title": "Paint",
+      "text": "Pick up paint for front door",
+      "id": "7"
     }
   ]
 }
