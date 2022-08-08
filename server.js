@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-const { notes } = require('./Develop/db/db.json');
+let { notes } = require('./Develop/db/db.json');
 
 // function that adds new to notes to db.json
 function createNewNote(body, activeNote) {
@@ -18,6 +18,15 @@ function createNewNote(body, activeNote) {
     fs.writeFileSync(
         path.join(__dirname, './Develop/db/db.json'),
         JSON.stringify({ notes: activeNote }, null, 2)
+    );
+    return body;
+}
+
+function deleteNote(body) {
+    
+    fs.writeFileSync(
+        path.join(__dirname, './Develop/db/db.json'),
+        JSON.stringify(notes, null, 2)
     );
     return body;
 }
@@ -45,6 +54,22 @@ app.post('/api/notes', (req, res) => {
     console.log(note);
     res.json(note);
 });
+
+app.delete('/api/notes/:id', (req, res) => {
+    var { id } = req.params;
+
+    const deleted = notes.find(note => note.id === id)
+    if (deleted) {
+        // console.log(deleted);
+        notes = notes.filter(note => note.id != id)
+        res.status(200).json(deleted);
+    } else {
+        res.status(404).json({message: "ID does not exist"});
+    }
+    const deletedNote = deleteNote;
+    console.log(deleteNote);
+        notes.filter(deleteNote);
+    });
 
 app.listen(PORT, () => {
     console.log("API server now on port" + ` ${PORT}`);
