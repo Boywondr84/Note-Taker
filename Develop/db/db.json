@@ -1,19 +1,27 @@
-{
-  "notes": [
-    {
-      "title": "Test Title",
-      "text": "Test Text",
-      "id": "0"
-    },
-    {
-      "title": "New Car",
-      "text": "pick up new car!!",
-      "id": "1"
-    },
-    {
-      "title": "Lawn care",
-      "text": "Buy seed, mow and apply before next rain",
-      "id": "2"
-    }
-  ]
-}
+[
+  {
+    "title": "Test Title",
+    "text": "Test Text",
+    "id": "0"
+  },
+  {
+    "title": "Lawn care",
+    "text": "Buy seed, mow and apply before next rain",
+    "id": "2"
+  },
+  {
+    "title": "Paint",
+    "text": "Buy paint for front door project.",
+    "id": "3"
+  },
+  {
+    "title": "Groceries",
+    "text": "Grocery shopping. Refer to shopping list.",
+    "id": "4"
+  },
+  {
+    "title": "Childcare",
+    "text": "Line up babysitter for this weekend.",
+    "id": "5"
+  }
+]
