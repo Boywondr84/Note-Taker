@@ -26,7 +26,7 @@ function deleteNote(body) {
     
     fs.writeFileSync(
         path.join(__dirname, './Develop/db/db.json'),
-        JSON.stringify(notes, null, 2)
+        JSON.stringify({ notes }, null, 2)
     );
     return body;
 }
